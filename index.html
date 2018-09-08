@@ -241,6 +241,8 @@ Error message and password prompt
 
 <li>$:/isEncrypted</li>
 
+<li>$:/maarfapad-plugin/render/template</li>
+
 <li>$:/palette</li>
 
 <li>$:/palettes/MaarfapadContrast</li>
@@ -366,6 +368,8 @@ Error message and password prompt
 <li>A.B. Samma</li>
 
 <li>Authors</li>
+
+<li>Maarfapad Plugin fixes (v0.5.20)</li>
 
 <li>Maarfapad Plugin v0.5.15 is out 🎉</li>
 
@@ -562,8 +566,8 @@ Error message and password prompt
 <div created="20180428011257852" modified="20180624211428637" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/delete">
 <pre>hide</pre>
 </div>
-<div created="20180904190627718" creator="A.B. Samma" modified="20180904190627718" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
-<pre>hide</pre>
+<div created="20180904190627718" creator="A.B. Samma" modified="20180908211337597" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<pre>show</pre>
 </div>
 <div created="20180428010046700" modified="20180715005853564" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info">
 <pre>hide</pre>
@@ -9117,10 +9121,17 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/config/ShortcutInfo/toggle-sidebar]]</pre>
+# [[$:/plugins/Abe/maarfapad]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div created="20180908222123979" creator="A.B. Samma" modified="20180908222441922" modifier="A.B. Samma" tags="" title="$:/maarfapad-plugin/render/template">
+<pre>\define renderContent()
+&lt;$text text=&lt;&lt;jsontiddlers &quot;[title[$:/plugins/Abe/maarfapad]]&quot;&gt;&gt;/&gt;
+\end
+&lt;&lt;renderContent&gt;&gt;
+</pre>
 </div>
 <div created="20180411113708644" creator="A.B. Samma" modified="20180904183500865" modifier="A.B. Samma" title="$:/palette">
 <pre>$:/palettes/MaarfapadContrast</pre>
@@ -9230,7 +9241,7 @@ toolbar-done-button:
 untagged-background: &lt;&lt;colour foreground&gt;&gt;
 very-muted-foreground: #888888</pre>
 </div>
-<div author="Abe" created="20140902114846490" description="Maarfapad: A KM platform" list="readme license history" modified="20180830193012457" plugin-type="plugin" title="$:/plugins/Abe/maarfapad" type="application/json" version="0.5.15">
+<div author="Abe" created="20140902114846490" description="Maarfapad: A KM platform" list="readme license history" modified="20180830193012457" plugin-type="plugin" title="$:/plugins/Abe/maarfapad" type="application/json" version="0.5.20">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/Abe/maarfapad/account.js&quot;: {
@@ -9287,10 +9298,10 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/plugins/Abe/maarfapad/history&quot;: {
             &quot;created&quot;: &quot;20140902083720188&quot;,
-            &quot;text&quot;: &quot;* ''0.0.1 alpha'' -- First release of Maarfapad plugin.\n* ''{{$:/plugins/Abe/maarfapad!!version}}'' -- Latest\n\n&quot;,
+            &quot;text&quot;: &quot;* ''0.0.1 alpha'' -- First release of Maarfapad plugin.\n* ''0.5.15'' -- Second release of Maarfapad plugin\n* ''{{$:/plugins/Abe/maarfapad!!version}}'' -- Latest\n\n&quot;,
             &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
             &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/history&quot;,
-            &quot;modified&quot;: &quot;20180902123410058&quot;
+            &quot;modified&quot;: &quot;20180908210833510&quot;
         },
         &quot;$:/plugins/Abe/maarfapad/license&quot;: {
             &quot;created&quot;: &quot;20140902084022063&quot;,
@@ -9311,20 +9322,11 @@ very-muted-foreground: #888888</pre>
         &quot;$:/plugins/Abe/maarfapad/my-account&quot;: {
             &quot;created&quot;: &quot;20170927122800517&quot;,
             &quot;caption&quot;: &quot;My Account&quot;,
-            &quot;modified&quot;: &quot;20180828182001842&quot;,
+            &quot;modified&quot;: &quot;20180908224545420&quot;,
             &quot;tags&quot;: &quot;&quot;,
             &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/my-account&quot;,
             &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;&lt;&lt;mpad-account&gt;&gt;&quot;
-        },
-        &quot;$:/plugins/Abe/maarfapad/my-data&quot;: {
-            &quot;caption&quot;: &quot;My Data&quot;,
-            &quot;created&quot;: &quot;20170831170025415&quot;,
-            &quot;modified&quot;: &quot;20170831170224917&quot;,
-            &quot;tags&quot;: &quot;&quot;,
-            &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/my-data&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;''Coming soon''&quot;
+            &quot;text&quot;: &quot;&lt;&lt;mpad-account&gt;&gt;\n\n,,[[Check for Maarfapad Plugin updates|https://abesamma.github.io/maarfapad-blog/index.html]],,&quot;
         },
         &quot;$:/plugins/Abe/maarfapad/my-wikis&quot;: {
             &quot;created&quot;: &quot;20170830152515844&quot;,
@@ -9344,12 +9346,12 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/plugins/Abe/maarfapad/saver.js&quot;: {
             &quot;created&quot;: &quot;20170722203934038&quot;,
-            &quot;text&quot;: &quot;/*\\\ncreated: 20170722203934038\ntype: application/javascript\ntitle: $:/plugins/Abe/maarfapad/saver.js\ntags: \nmodified: 20170927122619426\nmodule-type: saver\n\\*/\n(function () {\n  \n  var Saver = function(wiki){\n  };\n  \n  Saver.prototype.save = function(text,method,callback){\n    function overWriteCheck () {\n      // returns true to allow save to proceed\n      if (!sessionStorage) return true;\n      var clientWikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n      if (sessionStorage.getItem(clientWikiName) === 'outdated') {\n        var confirmOverwrite = confirm('Are you sure you want to overwrite your notebook with this older version?');\n        return confirmOverwrite;\n      }\n      return true;\n    };\n    var _origin = location.origin;\n    var toggleSaverJSON = $tw.wiki.extractTiddlerDataItem(\&quot;$:/state/maarfapad/ToggleSaverState\&quot;,\&quot;toggleSaver\&quot;);\n    var toggleSaver = JSON.parse(toggleSaverJSON);\n    if(toggleSaver === true){\n    // notify begining of save\n    $tw.rootWidget.dispatchEvent({\n            type: \&quot;tm-notify\&quot;,\n            param: \&quot;$:/plugins/Abe/maarfapad/save-working-notify\&quot;\n          });\n    // update revision\n    $tw.utils.httpRequest({\n      url: _origin + \&quot;/user\&quot;,\n      type: \&quot;GET\&quot;,\n      callback: function(err,data){\n        if(!err){\n          if (!overWriteCheck()){\n            $tw.rootWidget.dispatchEvent({\n              type: \&quot;tm-notify\&quot;,\n              param: \&quot;$:/plugins/Abe/maarfapad/cancelled-action-notify\&quot;\n            });\n            return;\n          }\n          new Promise(function (resolve,reject){\n            var rev = JSON.parse(data)._rev;\n            if (sessionStorage) {\n              var wikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n              var revposString = rev.slice(0,rev.indexOf(\&quot;-\&quot;));\n              var revposIntUpdate = parseInt(revposString) + 1;\n              sessionStorage.setItem(wikiName,revposIntUpdate.toString());\n              resolve(rev);\n            } else resolve(rev);\n          }).then(function (rev){\n            return $tw.utils.httpRequest({\n                       url: _origin + location.pathname + \&quot;/\&quot; + JSON.parse(data)._rev,\n                       type: \&quot;PUT\&quot;,\n                       headers: {\&quot;Content-type\&quot;: \&quot;text/html\&quot;},\n                       data: text,\n                       callback: function(err,data,xhr){\n                           if(err){\n                             switch(err) {\n                               case \&quot;XMLHttpRequest error code: 413\&quot;:\n                                  $tw.wiki.addTiddler(new $tw.Tiddler({\n                                      \&quot;title\&quot;: \&quot;$:/state/maarfapad/failed-save\&quot;,\n                                      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                      \&quot;text\&quot;: \&quot;The notebook you're attempting to save exceeded 10mb! Consider creating another notebook or delete some data you do not need anymore and then save again.\&quot;\n                                  }));\n                                  break;\n                               default: \n                                  $tw.wiki.addTiddler(new $tw.Tiddler({\n                                      \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                                      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                      \&quot;text\&quot;: \&quot;Failed to save this Wiki. Back up your wiki for later saving by deselecting Maarfapad as your saver. \\n\\n Error: \&quot; + err\n                                  }));\n                              }\n                            }\n                           console.log(\&quot;saved wiki!\&quot;);\n                           callback(null);\n                       }\n                   });\n          });\n        }else{\n          switch(err) {\n            case \&quot;XMLHttpRequest error code: 401\&quot;:\n              $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Your session has expired. Please back up your notebook and log in again.\&quot;\n              }));\n              break;\n            default:\n              $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Failed to save this notebook. Back up your wiki for later saving by deselecting Maarfapad as your saver. \\n\\n Error: \&quot; + err\n              }));\n        }\n      }\n      }\n    });\n    }\n    return toggleSaver\n  };\n\n  /*\nInformation about this saver\n*/\nSaver.prototype.info = {\n    name: \&quot;Maarfapad saver\&quot;,\n    priority: 3000,\n    capabilities: [\&quot;save\&quot;]\n};\n\n/*\nStatic method that returns true if this saver is capable of working\n*/\nexports.canSave = function(wiki) {\n    return true\n};\n\n/*\nCreate an instance of this saver\n*/\nexports.create = function(wiki) {\n    return new Saver(wiki);\n};\n})()&quot;,
+            &quot;text&quot;: &quot;/*\\\ncreated: 20170722203934038\ntype: application/javascript\ntitle: $:/plugins/Abe/maarfapad/saver.js\ntags: \nmodified: 20170927122619426\nmodule-type: saver\n\\*/\n(function () {\n  \n  var Saver = function(wiki){\n  };\n  \n  Saver.prototype.save = function(text,method,callback){\n    function overWriteCheck () {\n      // returns true to allow save to proceed\n      if (!sessionStorage) return true;\n      var clientWikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n      if (sessionStorage.getItem(clientWikiName) === 'outdated') {\n        var confirmOverwrite = confirm('Are you sure you want to overwrite your notebook with older data?');\n        return confirmOverwrite;\n      }\n      return true;\n    };\n    var _origin = location.origin;\n    var toggleSaverJSON = $tw.wiki.extractTiddlerDataItem(\&quot;$:/state/maarfapad/ToggleSaverState\&quot;,\&quot;toggleSaver\&quot;);\n    var toggleSaver = JSON.parse(toggleSaverJSON);\n    if(toggleSaver === true){\n    // notify begining of save\n    $tw.rootWidget.dispatchEvent({\n            type: \&quot;tm-notify\&quot;,\n            param: \&quot;$:/plugins/Abe/maarfapad/save-working-notify\&quot;\n          });\n    // update revision\n    $tw.utils.httpRequest({\n      url: _origin + \&quot;/user\&quot;,\n      type: \&quot;GET\&quot;,\n      callback: function(err,data){\n        if(!err){\n          if (!overWriteCheck()){\n            $tw.rootWidget.dispatchEvent({\n              type: \&quot;tm-notify\&quot;,\n              param: \&quot;$:/plugins/Abe/maarfapad/cancelled-action-notify\&quot;\n            });\n            return;\n          }\n          new Promise(function (resolve,reject){\n            var rev = JSON.parse(data)._rev;\n            if (sessionStorage) {\n              var wikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n              var revposString = rev.slice(0,rev.indexOf(\&quot;-\&quot;));\n              var revposIntUpdate = parseInt(revposString) + 1;\n              sessionStorage.setItem(wikiName,revposIntUpdate.toString());\n              resolve(rev);\n            } else resolve(rev);\n          }).then(function (rev){\n            return $tw.utils.httpRequest({\n                       url: _origin + location.pathname + \&quot;/\&quot; + JSON.parse(data)._rev,\n                       type: \&quot;PUT\&quot;,\n                       headers: {\&quot;Content-type\&quot;: \&quot;text/html\&quot;},\n                       data: text,\n                       callback: function(err,data,xhr){\n                           if(err){\n                             switch(err) {\n                               case \&quot;XMLHttpRequest error code: 413\&quot;:\n                                  $tw.wiki.addTiddler(new $tw.Tiddler({\n                                      \&quot;title\&quot;: \&quot;$:/state/maarfapad/failed-save\&quot;,\n                                      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                      \&quot;text\&quot;: \&quot;The notebook you're attempting to save exceeded 10mb! Consider creating another notebook or delete some data you do not need anymore and then save again.\&quot;\n                                  }));\n                                  break;\n                               default: \n                                  $tw.wiki.addTiddler(new $tw.Tiddler({\n                                      \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                                      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                      \&quot;text\&quot;: \&quot;Failed to save this Wiki. Back up your wiki for later saving by deselecting Maarfapad as your saver. \\n\\n Error: \&quot; + err\n                                  }));\n                              }\n                            }\n                           console.log(\&quot;saved wiki!\&quot;);\n                           callback(null);\n                       }\n                   });\n          });\n        }else{\n          switch(err) {\n            case \&quot;XMLHttpRequest error code: 401\&quot;:\n              $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Your session has expired. Please back up your notebook by deselecting Maarfapad as your saver, &lt;a href='http://maarfapad.com' target='_self'&gt;then log in again.&lt;/a&gt;\&quot;\n              }));\n              break;\n            default:\n              // we assume the notebook or server is offline\n              var clientWikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n              sessionStorage.setItem(clientWikiName,\&quot;offline\&quot;);\n              $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/save-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Failed to save this notebook. Back up your wiki for later saving by deselecting Maarfapad as your saver. \\n\\n Error: \&quot; + err\n              }));\n        }\n      }\n      }\n    });\n    }\n    return toggleSaver\n  };\n\n  /*\nInformation about this saver\n*/\nSaver.prototype.info = {\n    name: \&quot;Maarfapad saver\&quot;,\n    priority: 3000,\n    capabilities: [\&quot;save\&quot;]\n};\n\n/*\nStatic method that returns true if this saver is capable of working\n*/\nexports.canSave = function(wiki) {\n    return true\n};\n\n/*\nCreate an instance of this saver\n*/\nexports.create = function(wiki) {\n    return new Saver(wiki);\n};\n})()&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/saver.js&quot;,
             &quot;tags&quot;: &quot;&quot;,
             &quot;module-type&quot;: &quot;saver&quot;,
-            &quot;modified&quot;: &quot;20180829215919388&quot;
+            &quot;modified&quot;: &quot;20180908210330434&quot;
         },
         &quot;$:/plugins/Abe/maarfapad/upload.js&quot;: {
             &quot;created&quot;: &quot;20170828182221462&quot;,
@@ -9379,12 +9381,12 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/plugins/Abe/maarfapad/wikiManager.js&quot;: {
             &quot;created&quot;: &quot;20170903163200504&quot;,
-            &quot;text&quot;: &quot;/*\\\ncreated: 20170903163200504\ntype: application/javascript\ntitle: $:/plugins/Abe/maarfapad/wikiManager.js\ntags: \nmodified: 20171009212525559\nmodule-type: widget\n\nReturns a list of all wikis hosted on Maarfapad\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nvar Widget = require(\&quot;$:/core/modules/widgets/widget.js\&quot;).widget;\n\nvar wikiManagerWidget = function(parseTreeNode,options) {\n    this.initialise(parseTreeNode,options);\n};\n\n/*\nInherit from the base widget class\n*/\nwikiManagerWidget.prototype = new Widget();\n\n/*\nRender this widget into the DOM\n*/\nwikiManagerWidget.prototype.render = function(parent,nextSibling) {\n    var _origin = location.origin;\n    var self = this;\n    self.parentDomNode = parent;\n    this.computeAttributes();\n    this.execute();\n    $tw.utils.httpRequest({\n      url: _origin + \&quot;/user\&quot;,\n      type: \&quot;GET\&quot;,\n      callback: function(err,data){\n        if(!err){\n            self.doc = JSON.parse(data);\n            self.revision = self.doc._rev\n            var domNode = self.document.createElement(\&quot;table\&quot;);\n            for(var key in self.doc._attachments){\n\t\t\t\tvar type = self.doc._attachments[key].content_type;\n\t\t\t    if(type === \&quot;text/html\&quot;){\n\t\t\t\t    var del = self.document.createTextNode(\&quot;delete\&quot;);\n                    var button = self.document.createElement(\&quot;button\&quot;);\n                    button.appendChild(del);\n                    (function(key){\n                        button.addEventListener(\&quot;click\&quot;,function(){\n                            var allow = confirm(\&quot;Are you sure you want to delete \&quot; + key);\n                            if(allow === true){\n                                $tw.utils.httpRequest({\n                                    url: _origin + \&quot;/wiki/\&quot; + key + \&quot;/\&quot; + self.revision,\n                                    type: \&quot;DELETE\&quot;,\n                                    headers: {\n                                        \&quot;Content-type\&quot;:\&quot;text/html\&quot;,\n                                        \&quot;If-Match\&quot;: self.revision\n                                    },\n                                    callback: function(err,data,xhr){\n                                        if(!err){\n                                            self.dispatchEvent({\n                                                type: \&quot;tm-notify\&quot;,\n                                                param: \&quot;$:/plugins/Abe/maarfapad/delete-notify\&quot;\n                                            });\n                                            self.refreshSelf();\n                                        } else {\n                                            return $tw.wiki.addTiddler(new $tw.Tiddler({\n                                                       \&quot;title\&quot;: \&quot;$:/state/maarfapad/failed-delete\&quot;,\n                                                       \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                                       \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                                       \&quot;text\&quot;: \&quot;Failed to delete notebook. \\n\\n Error: \&quot; + err\n                                                   }));\n                                        }\n                                    }\n                                });\n                            }\n                        });\n                    })(key);\n                var text = self.document.createTextNode(key);\n                var textForHomeWiki = self.document.createTextNode(\&quot;You shall not delete!\&quot;);\n                var link = self.document.createElement(\&quot;a\&quot;);\n                link.setAttribute(\&quot;href\&quot;,_origin + \&quot;/wiki/\&quot; + key);\n                link.setAttribute(\&quot;target\&quot;,\&quot;_blank\&quot;);\n                var itemLink = self.document.createElement(\&quot;td\&quot;);\n                var itemButton = self.document.createElement(\&quot;td\&quot;);\n                var tableRow = self.document.createElement(\&quot;tr\&quot;);\n                link.appendChild(text);\n                itemLink.appendChild(link);\n                tableRow.appendChild(itemLink);\n                if(key !== \&quot;home\&quot;){\n                    itemButton.appendChild(button);\n                    tableRow.appendChild(itemButton);\n\t\t\t    } else {\n                    itemButton.appendChild(textForHomeWiki);\n                    tableRow.appendChild(itemButton);\n                }\n              }\n            domNode.appendChild(tableRow);\n            }\n            parent.insertBefore(domNode,nextSibling);\n            self.domNodes.push(domNode);\n        }else{\n            switch(err) {\n              case \&quot;XMLHttpRequest error code: 401\&quot;:\n                $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/fetch-user-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Your session has expired. Please back up your notebook and log in again.\&quot;\n                }));\n                break;\n              default:\n                $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/fetch-user-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Failed to connect to Maarfapad. \\n\\n Error: \&quot; + err\n                }));\n            }\n            var text = self.document.createTextNode(\&quot;Not connected\&quot;);\n            var domNode = self.document.createElement(\&quot;div\&quot;);\n            domNode.appendChild(text);\n            parent.insertBefore(domNode,nextSibling);\n          self.domNodes.push(domNode);\n        }\n      }\n    });\n};\n\n/*\nCompute the internal state of the widget\n*/\nwikiManagerWidget.prototype.execute = function(){\n};\n  \n/*\nSelectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering\n*/\nwikiManagerWidget.prototype.refresh = function(changedTiddlers) {\n  return true\n};\n\nexports.wikimanager = wikiManagerWidget;\n\n})();&quot;,
+            &quot;text&quot;: &quot;/*\\\ncreated: 20170903163200504\ntype: application/javascript\ntitle: $:/plugins/Abe/maarfapad/wikiManager.js\ntags: \nmodified: 20171009212525559\nmodule-type: widget\n\nReturns a list of all wikis hosted on Maarfapad\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nvar Widget = require(\&quot;$:/core/modules/widgets/widget.js\&quot;).widget;\n\nvar wikiManagerWidget = function(parseTreeNode,options) {\n    this.initialise(parseTreeNode,options);\n};\n\n/*\nInherit from the base widget class\n*/\nwikiManagerWidget.prototype = new Widget();\n\n/*\nRender this widget into the DOM\n*/\nwikiManagerWidget.prototype.render = function(parent,nextSibling) {\n    var _origin = location.origin;\n    var self = this;\n    self.parentDomNode = parent;\n    this.computeAttributes();\n    this.execute();\n    $tw.utils.httpRequest({\n      url: _origin + \&quot;/user\&quot;,\n      type: \&quot;GET\&quot;,\n      callback: function(err,data){\n        if(!err){\n            self.doc = JSON.parse(data);\n            self.revision = self.doc._rev\n            var domNode = self.document.createElement(\&quot;table\&quot;);\n            for(var key in self.doc._attachments){\n\t\t\t\tvar type = self.doc._attachments[key].content_type;\n\t\t\t    if(type === \&quot;text/html\&quot;){\n\t\t\t\t    var del = self.document.createTextNode(\&quot;delete\&quot;);\n                    var button = self.document.createElement(\&quot;button\&quot;);\n                    button.appendChild(del);\n                    (function(key){\n                        button.addEventListener(\&quot;click\&quot;,function(){\n                            var allow = confirm(\&quot;Are you sure you want to delete \&quot; + key);\n                            if(allow === true){\n                                $tw.utils.httpRequest({\n                                    url: _origin + \&quot;/wiki/\&quot; + key + \&quot;/\&quot; + self.revision,\n                                    type: \&quot;DELETE\&quot;,\n                                    headers: {\n                                        \&quot;Content-type\&quot;:\&quot;text/html\&quot;,\n                                        \&quot;If-Match\&quot;: self.revision\n                                    },\n                                    callback: function(err,data,xhr){\n                                        if(!err){\n                                            self.dispatchEvent({\n                                                type: \&quot;tm-notify\&quot;,\n                                                param: \&quot;$:/plugins/Abe/maarfapad/delete-notify\&quot;\n                                            });\n                                            self.refreshSelf();\n                                        } else {\n                                            return $tw.wiki.addTiddler(new $tw.Tiddler({\n                                                       \&quot;title\&quot;: \&quot;$:/state/maarfapad/failed-delete\&quot;,\n                                                       \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                                                       \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                                                       \&quot;text\&quot;: \&quot;Failed to delete notebook. \\n\\n Error: \&quot; + err\n                                                   }));\n                                        }\n                                    }\n                                });\n                            }\n                        });\n                    })(key);\n                var text = self.document.createTextNode(key);\n                var textForHomeWiki = self.document.createTextNode(\&quot;You shall not delete!\&quot;);\n                var link = self.document.createElement(\&quot;a\&quot;);\n                link.setAttribute(\&quot;href\&quot;,_origin + \&quot;/wiki/\&quot; + key);\n                link.setAttribute(\&quot;target\&quot;,\&quot;_self\&quot;);\n                var itemLink = self.document.createElement(\&quot;td\&quot;);\n                var itemButton = self.document.createElement(\&quot;td\&quot;);\n                var tableRow = self.document.createElement(\&quot;tr\&quot;);\n                link.appendChild(text);\n                itemLink.appendChild(link);\n                tableRow.appendChild(itemLink);\n                if(key !== \&quot;home\&quot;){\n                    itemButton.appendChild(button);\n                    tableRow.appendChild(itemButton);\n\t\t\t    } else {\n                    itemButton.appendChild(textForHomeWiki);\n                    tableRow.appendChild(itemButton);\n                }\n              }\n            domNode.appendChild(tableRow);\n            }\n            parent.insertBefore(domNode,nextSibling);\n            self.domNodes.push(domNode);\n        }else{\n            switch(err) {\n              case \&quot;XMLHttpRequest error code: 401\&quot;:\n                $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/fetch-user-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Your session has expired. Please back up your notebook and log in again.\&quot;\n                }));\n                break;\n              default:\n                $tw.wiki.addTiddler(new $tw.Tiddler({\n                  \&quot;title\&quot;: \&quot;$:/state/maarfapad/fetch-user-failed\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;Failed to connect to Maarfapad. \\n\\n Error: \&quot; + err\n                }));\n            }\n            var text = self.document.createTextNode(\&quot;Not connected\&quot;);\n            var domNode = self.document.createElement(\&quot;div\&quot;);\n            domNode.appendChild(text);\n            parent.insertBefore(domNode,nextSibling);\n          self.domNodes.push(domNode);\n        }\n      }\n    });\n};\n\n/*\nCompute the internal state of the widget\n*/\nwikiManagerWidget.prototype.execute = function(){\n};\n  \n/*\nSelectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering\n*/\nwikiManagerWidget.prototype.refresh = function(changedTiddlers) {\n  return true\n};\n\nexports.wikimanager = wikiManagerWidget;\n\n})();&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/wikiManager.js&quot;,
             &quot;tags&quot;: &quot;&quot;,
             &quot;module-type&quot;: &quot;widget&quot;,
-            &quot;modified&quot;: &quot;20180828193657088&quot;
+            &quot;modified&quot;: &quot;20180908211128812&quot;
         },
         &quot;$:/plugins/Abe/maarfapad/start-button&quot;: {
             &quot;created&quot;: &quot;20171117091808966&quot;,
@@ -9498,11 +9500,11 @@ very-muted-foreground: #888888</pre>
             &quot;modified&quot;: &quot;20180505101252514&quot;
         },
         &quot;$:/state/maarfapad/makeMaarfapadDefault&quot;: {
-            &quot;text&quot;: &quot;{\n    \&quot;maarfapadDefault\&quot;: \&quot;false\&quot;\n}&quot;,
+            &quot;text&quot;: &quot;{\n    \&quot;maarfapadDefault\&quot;: \&quot;true\&quot;\n}&quot;,
             &quot;type&quot;: &quot;application/json&quot;,
             &quot;title&quot;: &quot;$:/state/maarfapad/makeMaarfapadDefault&quot;,
             &quot;tags&quot;: &quot;&quot;,
-            &quot;modified&quot;: &quot;20180901223925444&quot;,
+            &quot;modified&quot;: &quot;20180904164649060&quot;,
             &quot;created&quot;: &quot;20171228143520892&quot;
         },
         &quot;$:/state/maarfapad/wiki-name&quot;: {
@@ -9607,12 +9609,12 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/plugins/Abe/maarfapad/changeListener.js&quot;: {
             &quot;created&quot;: &quot;20180613222607803&quot;,
-            &quot;text&quot;: &quot;(function (){\n  exports.startup = function (){\n    if (!sessionStorage) return;\n    if (!location.origin.includes('maarfapad.') &amp;&amp; !location.port.includes('8000') &amp;&amp; !location.port.includes('3000')) return;\n    \n    var changeCounter = setInterval(function (){\n      source = new EventSource(\&quot;/changefeed\&quot;);\n    },10000);\n    var clientWikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n    var alertMsg = {\n                  \&quot;title\&quot;: \&quot;$:/state/MaarfapadReload\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;A new version of this notebook was just saved to Maarfapad. Refresh to see it: \\n\\n &lt;$button message='tm-browser-refresh'&gt;{{$:/core/images/refresh-button}} Refresh&lt;/$button&gt;\&quot;\n              };\n    var onlineMsg = {\n      \&quot;title\&quot;: \&quot;$:/state/MaarfapadOnline\&quot;,\n      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n      \&quot;text\&quot;: \&quot;Connection has been restored. There may be a newer version of this notebook that was saved while offline. Would you like to refresh to see it? You can ignore this if you're sure there isn't.\\n\\n &lt;$button message='tm-browser-refresh'&gt;{{$:/core/images/refresh-button}} Refresh&lt;/$button&gt;\&quot;\n    };\n    // clears session for reloads\n    sessionStorage.removeItem(clientWikiName);\n    \n    var source = new EventSource(\&quot;/changefeed\&quot;);\n    source.onerror = function () {\n      return changeCounter;\n    };\n\n    source.onmessage = function (e) {\n      clearInterval(changeCounter);\n      var data = JSON.parse(e.data);\n      for (var wiki in data) {\n        if (wiki === clientWikiName) {\n          \n          var mpadRev = data[wiki];\n          new Promise(function (resolve,reject){\n            if (sessionStorage.getItem(clientWikiName) === null) {\n              sessionStorage.setItem(clientWikiName,data[wiki]);\n            }\n            if (sessionStorage.getItem(clientWikiName) === 'offline') {\n              sessionStorage.setItem(clientWikiName,data[wiki]);\n              $tw.wiki.deleteTiddler(\&quot;$:/state/MaarfapadOffline\&quot;);\n              $tw.wiki.addTiddler(new $tw.Tiddler(onlineMsg));\n            }\n            resolve(sessionStorage.getItem(clientWikiName));\n          }).then(function (clientRev){\n            if (clientRev !== mpadRev &amp;&amp; clientRev !== 'offline') {\n              sessionStorage.setItem(clientWikiName,'outdated');\n              $tw.wiki.addTiddler(new $tw.Tiddler(alertMsg));\n              return $tw.wiki.addTiddler(new $tw.Tiddler(alertMsg));\n            }\n          });\n\n        }\n      }\n    }; \n };\n})();&quot;,
+            &quot;text&quot;: &quot;(function (){\n  exports.startup = function (){\n    if (!sessionStorage) return;\n    if (!location.origin.includes('maarfapad.') &amp;&amp; !location.port.includes('8000') &amp;&amp; !location.port.includes('3000')) return;\n    \n    var changeCounter = setInterval(function (){\n      source = new EventSource(\&quot;/changefeed\&quot;);\n    },20000);\n    var clientWikiName = location.pathname.replace(\&quot;/wiki/\&quot;,\&quot;\&quot;);\n    var alertMsg = {\n                  \&quot;title\&quot;: \&quot;$:/state/MaarfapadReload\&quot;,\n                  \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n                  \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n                  \&quot;text\&quot;: \&quot;A new version of this notebook was just saved to Maarfapad. Refresh to see it: \\n\\n &lt;$button message='tm-browser-refresh'&gt;{{$:/core/images/refresh-button}} Refresh&lt;/$button&gt;\&quot;\n              };\n    var onlineMsg = {\n      \&quot;title\&quot;: \&quot;$:/state/MaarfapadOnline\&quot;,\n      \&quot;component\&quot;: \&quot;Maarfapad says:\&quot;,\n      \&quot;tags\&quot;: \&quot;$:/tags/Alert\&quot;,\n      \&quot;text\&quot;: \&quot;Connection has been restored. Would you like to refresh to see the up-to-date notebook? You can ignore this if you're sure there isn't.\\n\\n &lt;$button message='tm-browser-refresh'&gt;{{$:/core/images/refresh-button}} Refresh&lt;/$button&gt;\&quot;\n    };\n    // clears session for reloads\n    sessionStorage.removeItem(clientWikiName);\n    \n    var source = new EventSource(\&quot;/changefeed\&quot;);\n    source.onerror = function () {\n      return changeCounter;\n    };\n\n    source.onmessage = function (e) {\n      clearInterval(changeCounter);\n      var data = JSON.parse(e.data);\n      for (var wiki in data) {\n        if (wiki === clientWikiName) {\n          \n          var mpadRev = data[wiki];\n          new Promise(function (resolve,reject){\n            if (sessionStorage.getItem(clientWikiName) === null) {\n              sessionStorage.setItem(clientWikiName,data[wiki]);\n            }\n            if (sessionStorage.getItem(clientWikiName) === 'offline') {\n              sessionStorage.setItem(clientWikiName,data[wiki]);\n              $tw.wiki.deleteTiddler(\&quot;$:/state/MaarfapadOffline\&quot;);\n              $tw.wiki.addTiddler(new $tw.Tiddler(onlineMsg));\n            }\n            resolve(sessionStorage.getItem(clientWikiName));\n          }).then(function (clientRev){\n            if (clientRev !== mpadRev &amp;&amp; clientRev !== 'offline') {\n              sessionStorage.setItem(clientWikiName,'outdated');\n              $tw.wiki.addTiddler(new $tw.Tiddler(alertMsg));\n              return $tw.wiki.addTiddler(new $tw.Tiddler(alertMsg));\n            }\n          });\n\n        }\n      }\n    }; \n };\n})();&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;title&quot;: &quot;$:/plugins/Abe/maarfapad/changeListener.js&quot;,
             &quot;tags&quot;: &quot;&quot;,
             &quot;module-type&quot;: &quot;startup&quot;,
-            &quot;modified&quot;: &quot;20180830180245764&quot;
+            &quot;modified&quot;: &quot;20180908201916010&quot;
         },
         &quot;$:/plugins/Abe/maarfapad/save-filter&quot;: {
             &quot;created&quot;: &quot;20180826183637957&quot;,
@@ -9634,11 +9636,11 @@ very-muted-foreground: #888888</pre>
             &quot;modified&quot;: &quot;20180828193504491&quot;
         },
         &quot;$:/state/maarfapad/ToggleSaverState&quot;: {
+            &quot;created&quot;: &quot;20180902164059940&quot;,
             &quot;text&quot;: &quot;{\n    \&quot;toggleSaver\&quot;: \&quot;false\&quot;\n}&quot;,
             &quot;type&quot;: &quot;application/json&quot;,
             &quot;title&quot;: &quot;$:/state/maarfapad/ToggleSaverState&quot;,
-            &quot;modified&quot;: &quot;20180902164330277&quot;,
-            &quot;created&quot;: &quot;20180902164059940&quot;
+            &quot;modified&quot;: &quot;20180908224604063&quot;
         },
         &quot;$:/MaarfapadTutorial&quot;: {
             &quot;created&quot;: &quot;20180902223957895&quot;,
@@ -10835,7 +10837,7 @@ span.CodeMirror-selectedtext { background: none; }
     &quot;maarfapadDefault&quot;: &quot;false&quot;
 }</pre>
 </div>
-<div created="20180902164059940" creator="A.B. Samma" modified="20180904185049795" modifier="A.B. Samma" title="$:/state/maarfapad/ToggleSaverState" type="application/json">
+<div created="20180902164059940" creator="A.B. Samma" modified="20180908224745224" modifier="A.B. Samma" title="$:/state/maarfapad/ToggleSaverState" type="application/json">
 <pre>{
     &quot;toggleSaver&quot;: &quot;false&quot;
 }</pre>
@@ -10858,7 +10860,7 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180902163805589" creator="A.B. Samma" modified="20180904185409556" modifier="A.B. Samma" title="$:/state/plugin-info-875497724-$:/plugins/Abe/maarfapad--309862025">
 <pre>readme</pre>
 </div>
-<div created="20180902163618953" creator="A.B. Samma" modified="20180904190552002" modifier="A.B. Samma" title="$:/state/sidebar">
+<div created="20180902163618953" creator="A.B. Samma" modified="20180908224745223" modifier="A.B. Samma" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20180902185837771" creator="A.B. Samma" modified="20180904182316901" modifier="A.B. Samma" title="$:/state/tab--1498284803">
@@ -10867,14 +10869,14 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180902195156282" modified="20180902195156282" title="$:/state/tab--1663398061">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20180904151519465" creator="A.B. Samma" modified="20180904190632062" modifier="A.B. Samma" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/StoryView</pre>
+<div created="20180904151519465" creator="A.B. Samma" modified="20180908211319992" modifier="A.B. Samma" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div created="20180903203633054" modified="20180903203633054" title="$:/state/tab-1022363921">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20180904151511718" creator="A.B. Samma" modified="20180904190633615" modifier="A.B. Samma" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20180904151511718" creator="A.B. Samma" modified="20180908211317410" modifier="A.B. Samma" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20180902215201515" modified="20180902215223944" title="$:/state/tab-2037046965">
 <pre>$:/plugins/Abe/maarfapad/upload</pre>
@@ -10882,10 +10884,10 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180902163626603" modified="20180904144125234" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20180902163621378" creator="A.B. Samma" modified="20180904190702229" modifier="A.B. Samma" title="$:/state/tab/sidebar--1835078512">
+<div created="20180902163621378" creator="A.B. Samma" modified="20180908224826657" modifier="A.B. Samma" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20180904190613885" creator="A.B. Samma" modified="20180904190623178" modifier="A.B. Samma" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<div created="20180904190613885" creator="A.B. Samma" modified="20180908211332421" modifier="A.B. Samma" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div created="20180904151457004" creator="A.B. Samma" modified="20180904180648333" modifier="A.B. Samma" title="$:/state/toc/Content-Tutorial-926524725">
@@ -10894,7 +10896,7 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180904180412618" creator="A" modified="20180904180417824" modifier="A.B. Samm" title="$:/status/UserName">
 <pre>A.B. Samma</pre>
 </div>
-<div list="[[Maarfapad Plugin v0.5.15 is out 🎉]]" title="$:/StoryList">
+<div list="[[Maarfapad Plugin fixes (v0.5.20)]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180902185848715" creator="A.B. Samma" modified="20180904182315806" modifier="A.B. Samma" title="$:/temp/advancedsearch">
@@ -10913,7 +10915,7 @@ span.CodeMirror-selectedtext { background: none; }
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/HP/Dev/Maarfapad-Blog/index.html.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/HP/Dev/Maarfapad-Blog/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -10933,7 +10935,7 @@ span.CodeMirror-selectedtext { background: none; }
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/HP/Dev/Maarfapad-Blog/index.html.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/HP/Dev/Maarfapad-Blog/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -11176,7 +11178,26 @@ Great are the works of the LORD; they are pondered by all who delight in them.
 <div created="20180904190406211" creator="A.B. Samma" modified="20180904190442520" modifier="A.B. Samma" tags="Post" title="Authors">
 <pre>&lt;&lt;list-links &quot;[tag[Author]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20180904185323787" creator="A.B. Samma" modified="20180904190521885" modifier="A.B. Samma" tags="Latest Post" title="Maarfapad Plugin v0.5.15 is out 🎉">
+<div created="20180908211407352" creator="A.B. Samma" modified="20180908224718051" modifier="A.B. Samma" tags="Post Latest" title="Maarfapad Plugin fixes (v0.5.20)">
+<pre>Maarfapad Plugin v0.5.20 is now available. Download the files
+
+&lt;$button&gt;
+&lt;$action-sendmessage $message=&quot;tm-download-file&quot; $param=&quot;$:/maarfapad-plugin/render/template&quot; filename=&quot;maarfapad.json&quot;/&gt;
+Here
+&lt;/$button&gt;
+
+and import them into your notebook, then save and refresh.
+
+Or, [[drag and drop this link|$:/plugins/Abe/maarfapad]]
+
+It addresses the following issues:
+
+* Notebooks stored in Maarfapad opened in new tabs/windows, interfering in-app user experience.
+* Minor problems in listening for changes to notebooks from the Maarfapad server. NOTE firefox may disconnect this continuous connection at times. Otherwise, it works fine in Chrome and other evergreen browsers.
+
+Stay tuned for more exciting updates. Thanks for your patronage. 🙇</pre>
+</div>
+<div created="20180904185323787" creator="A.B. Samma" modified="20180908211350963" modifier="A.B. Samma" tags="Post" title="Maarfapad Plugin v0.5.15 is out 🎉">
 <pre>The latest version of the Maarfapad Plugin for ~TiddlyWiki v5.1.17 is ready for use.
 
 [[Click and drag this link|$:/plugins/Abe/maarfapad]] to your notebook to update your plugin. Then save your notebook to Maarfapad and refresh the page.
