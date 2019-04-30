@@ -46,7 +46,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
 <title>μ|aarfapad blog — Maarfapad: A Knowledge Management Platform</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
-<link href="//fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=latin-ext" rel="stylesheet"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87948080-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87948080-2');
+</script>
+
 
 </head>
 <body class="tc-body">
@@ -227,6 +236,8 @@ Error message and password prompt
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit</li>
 
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
+
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions</li>
@@ -246,6 +257,8 @@ Error message and password prompt
 <li>$:/GoogleAnalyticsAccount</li>
 
 <li>$:/GoogleAnalyticsDomain</li>
+
+<li>$:/GoogleAnalyticsScript</li>
 
 <li>$:/Import</li>
 
@@ -718,8 +731,8 @@ Error message and password prompt
 <div created="20180624212004058" modified="20180624212021483" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/clone">
 <pre>hide</pre>
 </div>
-<div created="20181208214737143" creator="A.B. Samma" modified="20181208214737143" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
-<pre>hide</pre>
+<div created="20181208214737143" creator="A.B. Samma" modified="20190430093600129" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
+<pre>show</pre>
 </div>
 <div created="20180624205818770" modified="20180624210007873" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others">
 <pre>hide</pre>
@@ -730,10 +743,13 @@ Error message and password prompt
 <div created="20180904190627718" creator="A.B. Samma" modified="20190124233125179" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
 <pre>hide</pre>
 </div>
+<div created="20190430093605439" creator="A.B. Samma" modified="20190430093606350" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar">
+<pre>hide</pre>
+</div>
 <div created="20180428010046700" modified="20180715005853564" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/info">
 <pre>hide</pre>
 </div>
-<div created="20180428010042752" creator="A.B. Samma" modified="20180904190625636" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
+<div created="20180428010042752" creator="A.B. Samma" modified="20190430093721426" modifier="A.B. Samma" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
 <pre>hide</pre>
 </div>
 <div created="20180624203553928" modified="20180624212018812" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-here">
@@ -9321,10 +9337,22 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20180910224716586" creator="A.B. Samma" modified="20180910224716587" modifier="A.B. Samma" title="$:/GoogleAnalyticsDomain">
 <pre>https://abesamma.github.io/maarfapad-blog/index.html</pre>
 </div>
+<div created="20190430093633833" creator="A.B. Samma" modified="20190430093710512" modifier="A.B. Samma" tags="$:/tags/RawMarkup" title="$:/GoogleAnalyticsScript">
+<pre>&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-87948080-2&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87948080-2');
+&lt;/script&gt;
+</pre>
+</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Using Tiddlers to Build APIs]]</pre>
+# [[Untitled]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -11067,7 +11095,7 @@ span.CodeMirror-selectedtext { background: none; }
     &quot;maarfapadDefault&quot;: &quot;false&quot;
 }</pre>
 </div>
-<div created="20180902164059940" creator="A.B. Samma" modified="20190124232517706" modifier="A.B. Samma" title="$:/state/maarfapad/ToggleSaverState" type="application/json">
+<div created="20180902164059940" creator="A.B. Samma" modified="20190430093438646" modifier="A.B. Samma" title="$:/state/maarfapad/ToggleSaverState" type="application/json">
 <pre>{
     &quot;toggleSaver&quot;: &quot;false&quot;
 }</pre>
@@ -11096,10 +11124,10 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180902163805589" creator="A.B. Samma" modified="20180904185409556" modifier="A.B. Samma" title="$:/state/plugin-info-875497724-$:/plugins/Abe/maarfapad--309862025">
 <pre>readme</pre>
 </div>
-<div created="20180902163618953" creator="A.B. Samma" modified="20190124232517705" modifier="A.B. Samma" title="$:/state/sidebar">
+<div created="20180902163618953" creator="A.B. Samma" modified="20190430093438643" modifier="A.B. Samma" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20180902185837771" creator="A.B. Samma" modified="20190124233131232" modifier="A.B. Samma" title="$:/state/tab--1498284803">
+<div created="20180902185837771" creator="A.B. Samma" modified="20190430093717131" modifier="A.B. Samma" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20180902195156282" modified="20180902195156282" title="$:/state/tab--1663398061">
@@ -11120,7 +11148,7 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20180902163626603" modified="20180904144125234" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20180902163621378" creator="A.B. Samma" modified="20190124233135556" modifier="A.B. Samma" title="$:/state/tab/sidebar--1835078512">
+<div created="20180902163621378" creator="A.B. Samma" modified="20190430093727730" modifier="A.B. Samma" title="$:/state/tab/sidebar--1835078512">
 <pre>Posts</pre>
 </div>
 <div created="20180904190613885" creator="A.B. Samma" modified="20181208214728536" modifier="A.B. Samma" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -11138,7 +11166,7 @@ span.CodeMirror-selectedtext { background: none; }
 <div created="20181208214715903" creator="A.B. Samma" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/more-page-actions $:/plugins/Abe/maarfapad/start-button" modified="20181208214720770" modifier="A.B. Samma" title="$:/tags/PageControls">
 <pre></pre>
 </div>
-<div created="20180902185848715" creator="A.B. Samma" modified="20190124233130039" modifier="A.B. Samma" title="$:/temp/advancedsearch">
+<div created="20180902185848715" creator="A.B. Samma" modified="20190430093715978" modifier="A.B. Samma" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
